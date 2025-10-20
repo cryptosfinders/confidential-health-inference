@@ -1,0 +1,20 @@
+{
+  "name": "zama-confidential-health-dapp",
+  "version": "0.2.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "contracts"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "build": "npm --workspaces run build",
+    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:contracts\"",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "dev:contracts": "npx hardhat node --hostname localhost",
+    "lint": "eslint . || true"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
