@@ -14,7 +14,8 @@
     "dev:contracts": "npx hardhat node --hostname localhost",
     "lint": "eslint . || true"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+  "dependencies": {
+    "@zama-ai/tfhe": "^0.4.0"
   }
 }
+
