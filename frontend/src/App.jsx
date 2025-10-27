@@ -67,7 +67,7 @@ export default function App() {
 
   return (
     <div style={{ maxWidth: 700, margin: '2rem auto', fontFamily: 'Arial' }}>
-      <h2>Zama Confidential Health Inference (TFHE-rs)</h2>
+      <h2>Confidential Health Inference (CHI)</h2>
       <p>
         This demo uses TFHE-rs in the browser to generate keys and encrypt small integers.
         <b> Do not use demo keys in production.</b>

@@ -1,4 +1,4 @@
-# Zama Confidential Health Inference 
+# Confidential Health Inference 
 
 It shows how Fully Homomorphic Encryption (FHE) could enable **private ML inference** over user data. It is an educational scaffold: replace placeholder encryption calls with real Zama Concrete/TFHE client and coprocessor endpoints for a production-ready build.
 

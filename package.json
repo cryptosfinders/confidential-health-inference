@@ -1,5 +1,5 @@
 {
-  "name": "contracts",
+  "name": "confidential-health-inference",
   "version": "0.1.0",
   "scripts": {
     "compile": "npx hardhat compile",
