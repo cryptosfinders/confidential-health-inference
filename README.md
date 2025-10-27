@@ -1,6 +1,6 @@
-# Zama Confidential Health Inference Demo
+# Zama Confidential Health Inference 
 
-This repository is a demo dApp that shows how Fully Homomorphic Encryption (FHE) could enable **private ML inference** over user data. It is an educational scaffold: replace placeholder encryption calls with real Zama Concrete/TFHE client and coprocessor endpoints for a production-ready build.
+It shows how Fully Homomorphic Encryption (FHE) could enable **private ML inference** over user data. It is an educational scaffold: replace placeholder encryption calls with real Zama Concrete/TFHE client and coprocessor endpoints for a production-ready build.
 
 ## What Zama Confidential Health Inference does
 - You type in simple health metrics (age, blood pressure, glucose).
@@ -28,6 +28,7 @@ This repository is a demo dApp that shows how Fully Homomorphic Encryption (FHE)
    ```bash
    cd frontend
    npm run dev
+   npm run dev -- --host 0.0.0.0
    ```
 
 4. (Optional) Run the relayer to simulate coprocessor work:
