@@ -1,21 +1,18 @@
 {
-  "name": "zama-confidential-health",
-  "version": "0.2.0",
-  "private": true,
-  "workspaces": [
-    "frontend",
-    "contracts"
-  ],
+  "name": "contracts",
+  "version": "0.1.0",
   "scripts": {
-    "install-all": "npm install --workspaces",
-    "build": "npm --workspaces run build",
-    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:contracts\"",
-    "dev:frontend": "npm --workspace frontend run dev",
-    "dev:contracts": "npx hardhat node --hostname localhost",
-    "lint": "eslint . || true"
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network fhevmTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.26.3"
   },
   "dependencies": {
-    "@zama-ai/tfhe": "^0.4.0"
+    "@fhevm/solidity": "file:fhevm-solidity",
+    "@zama-fhe/relayer-sdk": "^0.2.0",
+    "dotenv": "^17.2.3",
+    "ethers": "^6.15.0"
   }
 }
-

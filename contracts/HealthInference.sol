@@ -2,12 +2,10 @@
 pragma solidity ^0.8.18;
 
 // NOTE: Illustrative fhEVM imports (replace with real fhEVM/Zama imports)
-import "fhevm/lib/EncryptedTypes.sol";
-import "fhevm/lib/EncryptedOps.sol";
+import "../fhevm-solidity/lib/FHE.sol";
+import "../fhevm-solidity/lib/Impl.sol";
 
 contract HealthInference {
-    using EncryptedOps for euint256;
-
     // store encrypted inputs per user (ciphertext wrapper)
     mapping(address => bytes) public encryptedPayload;
 
@@ -36,7 +34,7 @@ contract HealthInference {
     }
 
     // Request threshold decryption via Gateway (KMS)
-    function requestDecryption(address user, bytes calldata encryptedResult) external returns (bytes memory requestId) {
+    function requestDecryption(address user, bytes calldata) external returns (bytes memory requestId) {
         // In production, integrate with KMS/Gateway contract to start threshold decryption.
         bytes memory mockReqId = abi.encodePacked(user, block.timestamp);
         emit InferenceRequested(user, mockReqId);

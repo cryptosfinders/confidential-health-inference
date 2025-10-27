@@ -18,7 +18,7 @@ let initialized = false;
 
 export async function initTfhe() {
   if (initialized) return;
-  await init(); // initialize wasm
+  await init('/tfhe_bg.wasm'); // initialize wasm
   // optional: initThreadPool(navigator.hardwareConcurrency);
   await init_panic_hook();
   initialized = true;
